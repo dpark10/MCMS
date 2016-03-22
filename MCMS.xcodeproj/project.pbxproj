@@ -7,21 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6815B36F1CA1D0CA00E190CC /* MagicalCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 6815B36E1CA1D0CA00E190CC /* MagicalCreature.m */; };
 		E223D0321CA1D01000827ACE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E223D0311CA1D01000827ACE /* main.m */; };
 		E223D0351CA1D01000827ACE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E223D0341CA1D01000827ACE /* AppDelegate.m */; };
-		E223D0381CA1D01000827ACE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E223D0371CA1D01000827ACE /* ViewController.m */; };
+		E223D0381CA1D01000827ACE /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E223D0371CA1D01000827ACE /* RootViewController.m */; };
 		E223D03B1CA1D01000827ACE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E223D0391CA1D01000827ACE /* Main.storyboard */; };
 		E223D03D1CA1D01000827ACE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E223D03C1CA1D01000827ACE /* Assets.xcassets */; };
 		E223D0401CA1D01000827ACE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E223D03E1CA1D01000827ACE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6815B36D1CA1D0CA00E190CC /* MagicalCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MagicalCreature.h; path = MCMS/MagicalCreature.h; sourceTree = "<group>"; };
+		6815B36E1CA1D0CA00E190CC /* MagicalCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MagicalCreature.m; path = MCMS/MagicalCreature.m; sourceTree = "<group>"; };
 		E223D02D1CA1D01000827ACE /* MCMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E223D0311CA1D01000827ACE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E223D0331CA1D01000827ACE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E223D0341CA1D01000827ACE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E223D0361CA1D01000827ACE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E223D0371CA1D01000827ACE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E223D0361CA1D01000827ACE /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		E223D0371CA1D01000827ACE /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		E223D03A1CA1D01000827ACE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E223D03C1CA1D01000827ACE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E223D03F1CA1D01000827ACE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +45,8 @@
 		E223D0241CA1D01000827ACE = {
 			isa = PBXGroup;
 			children = (
+				6815B36D1CA1D0CA00E190CC /* MagicalCreature.h */,
+				6815B36E1CA1D0CA00E190CC /* MagicalCreature.m */,
 				E223D02F1CA1D01000827ACE /* MCMS */,
 				E223D02E1CA1D01000827ACE /* Products */,
 			);
@@ -60,8 +65,8 @@
 			children = (
 				E223D0331CA1D01000827ACE /* AppDelegate.h */,
 				E223D0341CA1D01000827ACE /* AppDelegate.m */,
-				E223D0361CA1D01000827ACE /* ViewController.h */,
-				E223D0371CA1D01000827ACE /* ViewController.m */,
+				E223D0361CA1D01000827ACE /* RootViewController.h */,
+				E223D0371CA1D01000827ACE /* RootViewController.m */,
 				E223D0391CA1D01000827ACE /* Main.storyboard */,
 				E223D03C1CA1D01000827ACE /* Assets.xcassets */,
 				E223D03E1CA1D01000827ACE /* LaunchScreen.storyboard */,
@@ -149,7 +154,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E223D0381CA1D01000827ACE /* ViewController.m in Sources */,
+				E223D0381CA1D01000827ACE /* RootViewController.m in Sources */,
+				6815B36F1CA1D0CA00E190CC /* MagicalCreature.m in Sources */,
 				E223D0351CA1D01000827ACE /* AppDelegate.m in Sources */,
 				E223D0321CA1D01000827ACE /* main.m in Sources */,
 			);
@@ -214,7 +220,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -252,7 +258,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -264,6 +270,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MCMS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dp.MCMS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -275,6 +282,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MCMS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dp.MCMS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,6 +308,7 @@
 				E223D0461CA1D01000827ACE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
