@@ -56,8 +56,11 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)cell {
     CreatureViewController *destVC = segue.destinationViewController;
+
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-//    MagicalCreature *creature =
+    MagicalCreature *creature = self.creatures[indexPath.row];
+
+    destVC.creature = creature;
 }
 
 

@@ -17,8 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.creatureLabel.text = self.creature.name;
 }
 
+- (IBAction)onButtonTapped:(UIBarButtonItem *)sender {
+//              = if this thing is true                        then    this  else that
+   sender.title = [sender.title isEqualToString:@"Edit"] ? @"Done" : @"Edit";
+}
 
 @end
