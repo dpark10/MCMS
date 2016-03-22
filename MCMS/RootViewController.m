@@ -8,31 +8,26 @@
 
 #import "RootViewController.h"
 #import "MagicalCreature.h"
+#import "CreatureViewController.h"
 
-@interface RootViewController ()
+@interface RootViewController () <UITableViewDelegate, UITableViewDataSource>
 @property NSMutableArray *creatures;
+@property (weak, nonatomic) IBOutlet UITextField *textField1;
+@property (weak, nonatomic) IBOutlet UITextField *textField2;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
 @implementation RootViewController
 
--(instancetype) init {
-    self = [super init];
-
-    if (self) {
-        self.creatures = [NSMutableArray new];
-        MagicalCreature *mc1 = [[MagicalCreature alloc] initWithName:@"cookie monster"];
-        MagicalCreature *mc2 = [[MagicalCreature alloc] initWithName:@"godzilla"];
-        MagicalCreature *mc3 = [[MagicalCreature alloc] initWithName:@"mothra"];
-
-        self.creatures = [NSMutableArray arrayWithArray:@[mc1, mc2, mc3]];
-    }
-
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    MagicalCreature *mc1 = [[MagicalCreature alloc] initWithName:@"cookie monster"];
+    MagicalCreature *mc2 = [[MagicalCreature alloc] initWithName:@"godzilla"];
+    MagicalCreature *mc3 = [[MagicalCreature alloc] initWithName:@"mothra"];
+    
+    self.creatures = [NSMutableArray arrayWithArray:@[mc1, mc2, mc3]];
+    
 }
 
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -47,5 +42,23 @@
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.creatures.count;
 }
+
+- (IBAction)onAddButtonTapped:(UIBarButtonItem *)sender {
+    NSString *name = self.textField1.text;
+    if (![name isEqualToString:@""]) {
+        NSString *detail = self.textField2.text;
+        MagicalCreature *creature = [[MagicalCreature alloc] initWithName:name withDetail:detail];
+        [self.creatures addObject:creature];
+        [self.tableView reloadData];
+    }
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)cell {
+    CreatureViewController *destVC = segue.destinationViewController;
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+//    MagicalCreature *creature =
+}
+
 
 @end

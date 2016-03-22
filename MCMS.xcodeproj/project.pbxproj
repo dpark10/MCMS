@@ -14,6 +14,7 @@
 		E223D03B1CA1D01000827ACE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E223D0391CA1D01000827ACE /* Main.storyboard */; };
 		E223D03D1CA1D01000827ACE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E223D03C1CA1D01000827ACE /* Assets.xcassets */; };
 		E223D0401CA1D01000827ACE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E223D03E1CA1D01000827ACE /* LaunchScreen.storyboard */; };
+		E223D0491CA1DFEA00827ACE /* CreatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E223D0481CA1DFEA00827ACE /* CreatureViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		E223D03C1CA1D01000827ACE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E223D03F1CA1D01000827ACE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E223D0411CA1D01000827ACE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E223D0471CA1DFEA00827ACE /* CreatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatureViewController.h; sourceTree = "<group>"; };
+		E223D0481CA1DFEA00827ACE /* CreatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatureViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				E223D0361CA1D01000827ACE /* RootViewController.h */,
 				E223D0371CA1D01000827ACE /* RootViewController.m */,
 				E223D0391CA1D01000827ACE /* Main.storyboard */,
+				E223D0471CA1DFEA00827ACE /* CreatureViewController.h */,
+				E223D0481CA1DFEA00827ACE /* CreatureViewController.m */,
 				E223D03C1CA1D01000827ACE /* Assets.xcassets */,
 				E223D03E1CA1D01000827ACE /* LaunchScreen.storyboard */,
 				E223D0411CA1D01000827ACE /* Info.plist */,
@@ -157,6 +162,7 @@
 				E223D0381CA1D01000827ACE /* RootViewController.m in Sources */,
 				6815B36F1CA1D0CA00E190CC /* MagicalCreature.m in Sources */,
 				E223D0351CA1D01000827ACE /* AppDelegate.m in Sources */,
+				E223D0491CA1DFEA00827ACE /* CreatureViewController.m in Sources */,
 				E223D0321CA1D01000827ACE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
