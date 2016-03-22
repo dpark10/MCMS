@@ -22,12 +22,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    MagicalCreature *mc1 = [[MagicalCreature alloc] initWithName:@"cookie monster"];
-    MagicalCreature *mc2 = [[MagicalCreature alloc] initWithName:@"godzilla"];
-    MagicalCreature *mc3 = [[MagicalCreature alloc] initWithName:@"mothra"];
+    MagicalCreature *mc1 = [[MagicalCreature alloc] initWithName:@"cookie monster" withDetail:@"from Sesame Street"];
+    MagicalCreature *mc2 = [[MagicalCreature alloc] initWithName:@"godzilla" withDetail:@"from Japan"];
+    MagicalCreature *mc3 = [[MagicalCreature alloc] initWithName:@"mothra" withDetail:@"origin unknown"];
     
     self.creatures = [NSMutableArray arrayWithArray:@[mc1, mc2, mc3]];
     
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -36,6 +41,7 @@
 
     MagicalCreature *creature = self.creatures[indexPath.row];
     cell.textLabel.text = creature.name;
+    cell.detailTextLabel.text = creature.detail;
     return cell;
 }
 

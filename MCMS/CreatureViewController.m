@@ -9,8 +9,12 @@
 #import "CreatureViewController.h"
 
 @interface CreatureViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *creatureLabel;
-@property (weak, nonatomic) IBOutlet UITextField *editTextField;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *detailLabel;
+
+
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *detailTextField;
 @property BOOL isEditing;
 
 @end
@@ -19,9 +23,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.creatureLabel.text = self.creature.name;
+    self.nameLabel.text = self.creature.name;
+    self.detailLabel.text = self.creature.detail;
     self.isEditing = NO;
-    
 }
 
 - (IBAction)onButtonTapped:(UIBarButtonItem *)sender {
@@ -29,26 +33,32 @@
 
     if (self.isEditing) {
         // display text field
-        self.editTextField.hidden = NO;
+        self.nameTextField.hidden = NO;
+        self.detailTextField.hidden = NO;
         
         // hide label
-        self.creatureLabel.hidden = YES;
+        self.nameLabel.hidden = YES;
+        self.detailLabel.hidden = YES;
         
         // change button title
         sender.title = @"Done";
         
     } else { // not editing
         // save what was just entered as new creature name
-        self.creature.name = self.editTextField.text;
+        self.creature.name = self.nameTextField.text;
+        self.creature.detail = self.detailTextField.text;
         
         // hide text field
-        self.editTextField.hidden = YES;
+        self.nameTextField.hidden = YES;
+        self.detailTextField.hidden = YES;
         
         // show label
-        self.creatureLabel.hidden = NO;
+        self.nameLabel.hidden = NO;
+        self.detailLabel.hidden = NO;
         
         // update the label
-        self.creatureLabel.text = self.creature.name;
+        self.nameLabel.text = self.creature.name;
+        self.detailLabel.text = self.creature.detail;
         
         // change button title
         sender.title = @"Edit";
