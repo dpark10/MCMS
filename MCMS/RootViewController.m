@@ -22,11 +22,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    MagicalCreature *mc1 = [[MagicalCreature alloc] initWithName:@"cookie monster" withDetail:@"from Sesame Street"];
-    MagicalCreature *mc2 = [[MagicalCreature alloc] initWithName:@"godzilla" withDetail:@"from Japan"];
-    MagicalCreature *mc3 = [[MagicalCreature alloc] initWithName:@"mothra" withDetail:@"origin unknown"];
     
-    self.creatures = [NSMutableArray arrayWithArray:@[mc1, mc2, mc3]];
+    MagicalCreature *mc1 = [[MagicalCreature alloc] initWithName:@"Allie" withDetail:@"swampy teeth" withImage:[UIImage imageNamed:@"alligator"]];
+    MagicalCreature *mc2 = [[MagicalCreature alloc] initWithName:@"Batty" withDetail:@"flappy wings" withImage:[UIImage imageNamed:@"bat"]];
+    MagicalCreature *mc3 = [[MagicalCreature alloc] initWithName:@"Baldy" withDetail:@"chrome dome" withImage:[UIImage imageNamed:@"eagle"]];
+    MagicalCreature *mc4 = [[MagicalCreature alloc] initWithName:@"Wolfy" withDetail:@"horrifying howl" withImage:[UIImage imageNamed:@"wolf"]];
+    MagicalCreature *mc5 = [[MagicalCreature alloc] initWithName:@"Leo" withDetail:@"roary roar" withImage:[UIImage imageNamed:@"lion"]];
+    MagicalCreature *mc6 = [[MagicalCreature alloc] initWithName:@"Crabby" withDetail:@"pinchy pinchers" withImage:[UIImage imageNamed:@"crab"]];
+    MagicalCreature *mc7 = [[MagicalCreature alloc] initWithName:@"Jake" withDetail:@"rattly rattle" withImage:[UIImage imageNamed:@"snake"]];
+    
+    self.creatures = [NSMutableArray arrayWithArray:@[mc1, mc2, mc3, mc4, mc5, mc6, mc7]];
     
 }
 
@@ -42,6 +47,7 @@
     MagicalCreature *creature = self.creatures[indexPath.row];
     cell.textLabel.text = creature.name;
     cell.detailTextLabel.text = creature.detail;
+    cell.imageView.image = creature.image;
     return cell;
 }
 
@@ -53,8 +59,10 @@
     NSString *name = self.textField1.text;
     if (![name isEqualToString:@""]) {
         NSString *detail = self.textField2.text;
-        MagicalCreature *creature = [[MagicalCreature alloc] initWithName:name withDetail:detail];
+        MagicalCreature *creature = [[MagicalCreature alloc] initWithName:name withDetail:detail withImage:[UIImage imageNamed:@"bee"]];
         [self.creatures addObject:creature];
+        self.textField1.text = nil;
+        self.textField2.text = nil;
         [self.tableView reloadData];
     }
 }

@@ -15,6 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *detailTextField;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property BOOL isEditing;
 
 @end
@@ -25,6 +26,7 @@
     [super viewDidLoad];
     self.nameLabel.text = self.creature.name;
     self.detailLabel.text = self.creature.detail;
+    self.imageView.image = self.creature.image;
     self.isEditing = NO;
 }
 

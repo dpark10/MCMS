@@ -15,10 +15,15 @@
 }
 
 -(instancetype) initWithName:(NSString *)name withDetail:(NSString *)detail {
+    return [self initWithName:name withDetail:detail withImage:nil];
+}
+
+-(instancetype) initWithName:(NSString *)name withDetail:(NSString *)detail withImage:(UIImage *)image {
     self = [super init];
     if (self) {
         self.name = name;
         self.detail = detail;
+        self.image = image;
     }
     return self;
 }

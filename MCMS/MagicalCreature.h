@@ -6,14 +6,17 @@
 //  Copyright © 2016 Dan Park. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface MagicalCreature : NSObject
 
 @property NSString *name;
 @property NSString *detail;
+@property UIImage *image;
 
 -(instancetype) initWithName:(NSString *)name;
 -(instancetype) initWithName:(NSString *)name withDetail:(NSString *)detail;
+-(instancetype) initWithName:(NSString *)name withDetail:(NSString *)detail withImage:(UIImage *)image;
+
 
 @end
