@@ -18,6 +18,7 @@
 -(instancetype) initWithName:(NSString *)name;
 -(instancetype) initWithName:(NSString *)name withDetail:(NSString *)detail;
 -(instancetype) initWithName:(NSString *)name withDetail:(NSString *)detail withImage:(UIImage *)image;
+-(instancetype) initWithName:(NSString *)name withDetail:(NSString *)detail withImage:(UIImage *)image withAccessories:(NSMutableArray *)accessories;
 
 
 @end
