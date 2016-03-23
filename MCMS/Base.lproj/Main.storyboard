@@ -162,6 +162,25 @@
                                     <rect key="frame" x="20" y="64" width="360" height="175"/>
                                 </variation>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6oN-Bx-Bf7">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellID" id="CUw-dH-tfF">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CUw-dH-tfF" id="TzP-4z-uAz">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="22" y="323" width="358" height="225"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="hf9-wI-tr8" id="w0s-iB-rpy"/>
+                                    <outlet property="delegate" destination="hf9-wI-tr8" id="HV0-lQ-CER"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -171,6 +190,7 @@
                                 <exclude reference="Nwm-Ju-rCr"/>
                                 <exclude reference="CRs-Hw-dPA"/>
                                 <exclude reference="KRW-9Q-PNm"/>
+                                <exclude reference="6oN-Bx-Bf7"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -180,6 +200,7 @@
                                 <include reference="Nwm-Ju-rCr"/>
                                 <include reference="CRs-Hw-dPA"/>
                                 <include reference="KRW-9Q-PNm"/>
+                                <include reference="6oN-Bx-Bf7"/>
                             </mask>
                         </variation>
                     </view>
